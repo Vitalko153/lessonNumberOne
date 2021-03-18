@@ -7,21 +7,25 @@ public class Robot implements RunableJumpable{
         this.name = name;
     }
 
-
-    public String run(int lengthRoad) {
+    @Override
+    public boolean run(int lengthRoad) {
         if(MAX_RUN_LENGTH >= lengthRoad){
-            return (name + " пробежал " + lengthRoad + " метров.");
+            System.out.println(name + " пробежал " + lengthRoad + " метров.");
+            return true;
         }
-        return (name + " не смог пробежать " + lengthRoad + " метров.");
+        System.out.println(name + " не смог пробежать " + lengthRoad + " метров.");
+        return false;
     }
 
-
-    public String jump(int heightWall) {
+    @Override
+    public boolean jump(int heightWall) {
         if (MAX_JUMP_HEIGHT >= heightWall) {
-            return (name + " прыгнул на " + heightWall + " метра.");
+            System.out.println(name + " прыгнул на " + heightWall + " метра.");
+            return true;
         }
         else {
-            return (name + " не смог прыгнуть на " + heightWall + " метра.");
+            System.out.println(name + " не смог прыгнуть на " + heightWall + " метра.");
+            return false;
         }
     }
 }

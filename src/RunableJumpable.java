@@ -1,6 +1,6 @@
 public interface RunableJumpable {
 
-    String run(int lengthRoad);
+    boolean run(int lengthRoad);
 
-    String jump(int heightWall);
+    boolean jump(int heightWall);
 }
